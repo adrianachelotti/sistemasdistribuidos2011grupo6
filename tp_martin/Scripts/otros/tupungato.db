@@ -1,0 +1,22 @@
+$TTL 3D 
+@		IN	SOA	ns.tupungato.mendoza.dc.fi.uba.ar. hostmaster.tupungato.mendoza.dc.fi.uba.ar. ( 
+                        20110604       ; serial, fecha AAAA-MM-DD + serial 
+                        8H              ; refrescamiento, en segundos 
+                        2H              ; reentrar, segundos 
+                        4W              ; expira, segundos 
+                        1D )            ; minimo, segundos 
+ 
+ 
+			NS	ns 
+localhost	A    127.0.0.1 
+ns		IN	A	10.94.6.147 
+@		IN	A	10.94.6.147 
+h16g		IN	A	10.15.65.2 
+halcon1		IN	A	10.94.6.148 
+h16j		IN	A	10.43.9.3 
+ftpserver	IN	A	10.43.9.1 
+h17j		IN	A	10.43.9.4 
+h17k		IN	A	10.15.65.97 
+h17o		IN	A	10.15.65.5 
+; Aliases 
+h16i		IN	CNAME	ns 

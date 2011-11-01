@@ -1,0 +1,12 @@
+$TTL 3D 
+@		IN	SOA	ns.laslenas.mendoza.dc.fi.uba.ar. hostmaster.laslenas.mendoza.dc.fi.uba.ar. ( 
+                        20110604       ; serial, fecha AAAA-MM-DD + serial 
+                        8H              ; refrescamiento, en segundos 
+                        2H              ; reentrar, segundos 
+                        4W              ; expira, segundos 
+                        1D )            ; minimo, segundos 
+  
+		NS	ns.laslenas.mendoza.dc.fi.uba.ar. 
+1	IN	PTR	webserver.laslenas.mendoza.dc.fi.uba.ar. 
+2	IN	PTR	h30q.laslenas.mendoza.dc.fi.uba.ar. 
+ 
