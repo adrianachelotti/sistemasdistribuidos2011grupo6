@@ -1,0 +1,11 @@
+$TTL 3D 
+$ORIGIN 192-26.6.94.10.in-addr.arpa.
+@       IN      SOA     ns.sanrafael.mendoza.dc.fi.uba.ar. hostmaster.sanrafael.mendoza.dc.fi.uba.ar. ( 
+                        20110604       ; serial, fecha AAAA-MM-DD + serial 
+                        8H              ; refrescamiento, en segundos 
+                        2H              ; reentrar, segundos 
+                        4W              ; expira, segundos 
+                        1D )            ; minimo, segundos 
+		NS	ns.sanrafael.mendoza.dc.fi.uba.ar. 
+193	IN	PTR	h5f.sanrafael.mendoza.dc.fi.uba.ar. 
+
