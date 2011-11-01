@@ -1,0 +1,11 @@
+$TTL 3D 
+$ORIGIN 6-32.65.15.10.in-addr.arpa.
+@	IN	SOA	ns.laslenas.mendoza.dc.fi.uba.ar. hostmaster.laslenas.mendoza.dc.fi.uba.ar. ( 
+                        20110604       ; serial, fecha AAAA-MM-DD + serial 
+                        8H              ; refrescamiento, en segundos 
+                        2H              ; reentrar, segundos 
+                        4W              ; expira, segundos 
+                        1D )            ; minimo, segundos 
+ 		NS	ns.laslenas.mendoza.dc.fi.uba.ar. 
+6	IN	PTR	h33o.laslenas.mendoza.dc.fi.uba.ar. 
+
