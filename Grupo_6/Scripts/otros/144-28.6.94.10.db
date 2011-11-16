@@ -1,0 +1,13 @@
+$TTL 3D 
+$ORIGIN 144-28.6.94.10.in-addr.arpa.
+@		IN	SOA	ns.tupungato.cuyo.dc.fi.uba.ar. hostmaster.tupungato.cuyo.dc.fi.uba.ar. ( 
+                        20110604       ; serial, fecha AAAA-MM-DD + serial 
+                        8H              ; refrescamiento, en segundos 
+                        2H              ; reentrar, segundos 
+                        4W              ; expira, segundos 
+                        1D )            ; minimo, segundos 
+ 
+ 
+		NS	ns.tupungato.cuyo.dc.fi.uba.ar. 
+147	IN	PTR	h16i.tupungato.cuyo.dc.fi.uba.ar. 
+148	IN	PTR	elmarmolejo1.tupungato.cuyo.dc.fi.uba.ar. 

@@ -1,0 +1,20 @@
+$TTL 3D 
+@		IN	SOA	ns.laslenas.cuyo.dc.fi.uba.ar. hostmaster.laslenas.cuyo.dc.fi.uba.ar. ( 
+                        20110604       ; serial, fecha AAAA-MM-DD + serial 
+                        8H              ; refrescamiento, en segundos 
+                        2H              ; reentrar, segundos 
+                        4W              ; expira, segundos 
+                        1D )            ; minimo, segundos 
+ 
+ 
+			NS	ns 
+localhost	A    127.0.0.1 
+ns		IN	A	10.94.6.147 
+@		IN	A	10.94.6.147 
+h33o	IN	A	10.15.65.6 
+h33p	IN	A	10.43.10.2 
+milagro1	IN	A	10.43.10.4 
+h30p	IN	A	10.43.10.1 
+h30q	IN	A	192.168.16.2 
+webserver	IN	A	192.168.16.1 
+
