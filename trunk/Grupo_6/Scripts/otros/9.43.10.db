@@ -1,0 +1,13 @@
+$TTL 3D 
+@		IN	SOA	ns.tupungato.cuyo.dc.fi.uba.ar. hostmaster.tupungato.cuyo.dc.fi.uba.ar. ( 
+                        20110604       ; serial, fecha AAAA-MM-DD + serial 
+                        8H              ; refrescamiento, en segundos 
+                        2H              ; reentrar, segundos 
+                        4W              ; expira, segundos 
+                        1D )            ; minimo, segundos 
+ 
+ 
+		NS	ns.tupungato.cuyo.dc.fi.uba.ar. 
+1	IN	PTR	ftpserver.tupungato.cuyo.dc.fi.uba.ar. 
+3	IN	PTR	h16j.tupungato.cuyo.dc.fi.uba.ar. 
+4	IN	PTR	h17j.tupungato.cuyo.dc.fi.uba.ar. 

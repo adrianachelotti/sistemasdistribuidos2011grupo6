@@ -1,0 +1,14 @@
+$TTL 3D 
+$ORIGIN 128-28.6.94.10.in-addr.arpa.
+@       IN      SOA     ns.sanrafael.cuyo.dc.fi.uba.ar. hostmaster.sanrafael.cuyo.dc.fi.uba.ar. ( 
+                        20110604       ; serial, fecha AAAA-MM-DD + serial 
+                        8H              ; refrescamiento, en segundos 
+                        2H              ; reentrar, segundos 
+                        4W              ; expira, segundos 
+                        1D )            ; minimo, segundos 
+		NS	ns.sanrafael.cuyo.dc.fi.uba.ar. 
+129	IN	PTR	telserverd.sanrafael.cuyo.dc.fi.uba.ar. 
+130	IN	PTR	h3d.sanrafael.cuyo.dc.fi.uba.ar. 
+131	IN	PTR	h5d.sanrafael.cuyo.dc.fi.uba.ar. 
+ 
+
