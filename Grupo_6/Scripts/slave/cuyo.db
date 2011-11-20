@@ -1,0 +1,20 @@
+$TTL 3D 
+@		IN	SOA	ns.cuyo.dc.fi.uba.ar. hostmaster.cuyo.dc.fi.uba.ar. ( 
+                        20111118       ; serial, fecha AAAA-MM-DD + serial 
+                        8H              ; refrescamiento, en segundos 
+                        2H              ; reentrar, segundos 
+                        4W              ; expira, segundos 
+                        1D )            ; minimo, segundos 
+ 
+ 
+			NS	ns 
+localhost	A    127.0.0.1 
+ns		IN	A	10.43.9.4 
+@		IN	A	10.43.9.4
+sanrafael.cuyo.dc.fi.uba.ar.	IN	NS	ns.sanrafael.cuyo.dc.fi.uba.ar.
+tupungato.cuyo.dc.fi.uba.ar.	IN	NS	ns.tupungato.cuyo.dc.fi.uba.ar.
+laslenas.cuyo.dc.fi.uba.ar.	IN	NS	ns.laslenas.cuyo.dc.fi.uba.ar.
+
+ns.sanrafael.cuyo.dc.fi.uba.ar.	IN	A	10.94.6.130
+ns.tupungato.cuyo.dc.fi.uba.ar.	IN	A	10.94.6.147
+ns.laslenas.cuyo.dc.fi.uba.ar.	IN	A	10.94.6.147
