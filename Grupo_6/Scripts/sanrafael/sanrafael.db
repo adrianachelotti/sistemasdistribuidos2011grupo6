@@ -1,7 +1,7 @@
 $TTL 3D 
  
 @       IN      SOA     ns.sanrafael.cuyo.dc.fi.uba.ar. hostmaster.sanrafael.cuyo.dc.fi.uba.ar. ( 
-                        20110604       ; serial, fecha AAAA-MM-DD + serial 
+                        20111118       ; serial, fecha AAAA-MM-DD + serial 
                         8H              ; refrescamiento, en segundos 
                         2H              ; reentrar, segundos 
                         4W              ; expira, segundos 
