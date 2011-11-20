@@ -1,0 +1,23 @@
+$TTL 3D 
+$ORIGIN 65.15.10.in-addr.arpa.
+@       IN      SOA     ns.cuyo.dc.fi.uba.ar. hostmaster.cuyo.dc.fi.uba.ar. ( 
+                        20111118       ; serial, fecha AAAA-MM-DD + serial 
+                        8H              ; refrescamiento, en segundos 
+                        2H              ; reentrar, segundos 
+                        4W              ; expira, segundos 
+                        1D )            ; minimo, segundos 
+		NS	ns.cuyo.dc.fi.uba.ar. 
+128-25	IN	NS	ns.sanrafael.cuyo.dc.fi.uba.ar.
+1-32	IN	NS	ns.sanrafael.cuyo.dc.fi.uba.ar.
+2-32	IN	NS	ns.tupungato.cuyo.dc.fi.uba.ar.
+96-27	IN	NS	ns.tupungato.cuyo.dc.fi.uba.ar.
+5-32	IN	NS	ns.tupungato.cuyo.dc.fi.uba.ar.
+6-32	IN	NS	ns.laslenas.cuyo.dc.fi.uba.ar.
+
+$GENERATE       1-1  $       CNAME   $.1-32
+$GENERATE       2-2  $       CNAME   $.2-32
+$GENERATE       5-5  $       CNAME   $.5-32
+$GENERATE       6-6  $       CNAME   $.6-32
+$GENERATE       128-255  $       CNAME   $.128-25
+$GENERATE	96-127	 $	 CNAME	 $.96-27
+

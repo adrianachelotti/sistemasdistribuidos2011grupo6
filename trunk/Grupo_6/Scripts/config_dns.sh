@@ -11,6 +11,7 @@ H17_J=10.43.9.4
  
 BIND_DIR="/etc/bind" 
 ROOT_DIR="./root" 
+SLAVE_DIR="./slave"
 SANRAFAEL_DIR="./sanrafael" 
 OTROS_DIR="./otros" 
  
@@ -80,14 +81,23 @@ function main() {
  
 	case "$1" in 
 			ROOT) 
-			    	BackupDNSConf		    	 
-			    	cp -f $ROOT_DIR/named.conf $BIND_DIR/named.conf 
+			   	BackupDNSConf		    	 
+			    cp -f $ROOT_DIR/named.conf $BIND_DIR/named.conf 
 				cp -f $ROOT_DIR/cuyo.db $BIND_DIR/cuyo.db 
 				cp -f $ROOT_DIR/6.94.10.db $BIND_DIR/6.94.10.db 
 				cp -f $ROOT_DIR/65.15.10.db $BIND_DIR/65.15.10.db 
 				ConfigurarDNS 
 			;; 
  
+			SLAVE) 
+		    	BackupDNSConf		    	 
+		    	cp -f $SLAVE_DIR/named.conf $BIND_DIR/named.conf 
+				cp -f $SLAVE_DIR/cuyo.db $BIND_DIR/cuyo.db 
+				cp -f $SLAVE_DIR/6.94.10.db $BIND_DIR/6.94.10.db 
+				cp -f $SLAVE_DIR/65.15.10.db $BIND_DIR/65.15.10.db 
+				ConfigurarDNS 
+			;; 
+			
 			SANRAFAEL) 
 				BackupDNSConf 
 			    	cp -f $SANRAFAEL_DIR/named.conf $BIND_DIR/named.conf		    					 
