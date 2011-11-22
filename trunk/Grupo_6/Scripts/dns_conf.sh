@@ -144,7 +144,7 @@ fi
 if [ $# = 0 ]; then 
 	echo "Se debe proporcionar un parametro que indique el DNS a configurar" 
 	echo "Las opciones posibles son:" 
-	echo "ROOT, SANRAFAEL, OTROS" 
+	echo "ROOT, SANRAFAEL, OTROS, SLAVE" 
 	exit -1 
 elif [ $# = 2 ]; then	 
 	DEBUG=$2 
