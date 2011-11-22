@@ -1,0 +1,74 @@
+================================================================================================================
+				75.43 - Introduccion a los Sistemas Distribuidos               											
+					Trabajo Practico Final. Grupo 6                                      
+				Explicación sobre funcionamiento de scripts
+================================================================================================================
+Equipos
+================
+Se usan al menos 8 máquinas, las cuales se organizan de la siguiente forma:- 6 corresponden a los routers.- 1 funciona como los 3 servers (ftp, web y telnet).- 1 funciona como los 3 hosts (A, B y C).
+Tanto los servers como los host funcionan de a uno por vez, no en forma simultánea.
+
+
+Scripts
+================
+Se crearon scripts de configuración automáticos y paramétricos para lograr configurar rápidamente los equipos. 
+En todos los casos estos scripts se ocupan de eliminar la configuración existente en la máquina, siendo necesario 
+encontrarse autenticado como súper usuario.
+
+
+1. Tipos de scripts
+
+1.1 equipos_conf.sh: Script de configuración de equipos
+Debe ejecutarse en todas las maquinas sin excepción, siendo el primer paso del proceso de configuración. 
+Este script es el encargado de configurar todas las interfaces y agregar las entradas necesarias en la 
+tabla de ruteo de cada dispositivo. 
+
+ - Los pasos seguidos en el script son:
+		1. Deshabilitación de las interfaces
+		2. Borrado de la tabla de ruteo
+		3. Habilitación de la primer interfaz encontrada
+		4. Configuraciñon de los datos de DNS
+		5. Seteo de el nombre del host
+		6. Habilitación del forwardeo de paquetes IP
+		7. Configuración las sub interfaces
+		8. Configuración la tabla de ruteo
+ - Modo de empleo:		./equipos_conf.sh IDENTIFICADOR_DE_EQUIPO [FLAG_DE_DEBUG]	
+		IDENTIFICADOR_DE_EQUIPO: Obligatorio. Representa al equipo a configurar. Ej: H16, FTP, etc.		FLAG_DE_DEBUG: Opcional. Ingresando el valor 1 se corre el script con nivel de log en debug.  - Ejemplo de ejecución:
+ 		Configuración del router H16
+	 		./equipos_conf.sh H16
+	 	Configuración del equipo del ftp server
+	 		./equipos_conf.sh FTP
+
+1.2 servidores_conf.sh: Script de configuración de servidores.
+Debe ejecutarse después de haber ejecutado equipos_conf.sh y solamente en los equipos que funcionen como servidores Web, FTP o TELNET. En el caso particular de esta simulación el mismo solo deberá correrse en un solo equipo. Debe controlarse que la máquina cuente con los tres servicios (apache2, telnetd y proftpd) en caso de no contar con ellos deberán instalarse los paquetes respectivos. Una vez ejecutado el script se inicia el servicio que recibe en el primer parámetro.
+
+ - Los pasos seguidos en el script son:
+	Servidor web
+		1. Si es requerido, instalación de apache2
+		2. Copiado de archivos a /var/www/
+		3. Iniciado de apache
+	Servidor Telnet
+		1. Si es requerido, instalación de telnetd
+		2. Iniciado de telnet
+	Servidor FTP
+		1. Si es requerido, instalación de proftpd
+		2. Iniciado de ftp
+ - Modo de empleo:		./servidores_conf.sh TIPO_DE_SERVIDOR [FLAG_DE_INSTALACION]	
+		TIPO_DE_SERVIDOR: Obligatorio. Representa al servicio que se quiere iniciar. Ej: WEB, FTP o TELNET.		FLAG_DE_INSTALACION: Opcional. Ingresando el valor 1 se trata de instalar el servicio. - Ejemplos de ejecución: 
+		Configuración del web server			./servidores_conf.sh WEB
+		Configuracion del ftp server
+			./servidores_conf.sh FTP
+1.3 dns_conf.sh: Script de configuración de DNS.
+Debe ejecutarse después de haber ejecutado equipos_ conf.sh y solo en los equipos que actúen como servidor de DNS. Este script es el encargado de configurar e iniciar el servicio de DNS en cada host según corresponda. También debe estar instalado en servicio bind en caso contrario deberá instalarse el paquete correspondiente.
+
+ - Los pasos seguidos en el script son:
+		1. Detención de bind9
+		2. Backup de /etc/bind
+		3. Backup de /etc/hosts
+		4. Copiado de archivos de configuración de DNS
+		5. Iniciado de bind9
+	 - Modo de empleo:		./dns_conf.sh IDENTIFICADOR_DNS 	
+		IDENTIFICADOR_DNS: Obligatorio. Representa el servicio DNS que se quiere inciar. Ej: ROOT, SANRAFAEL, etc. 
+	
+ - Ejemplo de ejecución:
+		Configuración del serivcio DNS ROOT				./dns_conf.sh ROOT
