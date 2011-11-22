@@ -16,6 +16,7 @@ function main() {
 			cp -f paginaWeb/index.html /var/www/index.html
             cp -f paginaWeb/style.css /var/www/style.css
             cp -r paginaWeb/images /var/www/images
+			chmod 777 /var/www/images/*
 			if [ $INSTALL = 1 ]; then
 				apt-get install apache2
 			fi
@@ -27,7 +28,8 @@ function main() {
 				then
 					cp -f paginaWeb/index.html /var/www/index.html
 					cp -f paginaWeb/style.css /var/www/style.css
-					cp -r paginaWeb/images /var/www/images				
+					cp -r paginaWeb/images /var/www/images		
+					chmod 777 /var/www/images/*					
 					echo "Iniciando servidor Web.."
 					/etc/init.d/apache2 start
 				fi
