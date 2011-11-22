@@ -1,12 +1,13 @@
 ================================================================================================================
-				75.43 - Introduccion a los Sistemas Distribuidos               											
-					Trabajo Practico Final. Grupo 6                                      
+				75.43 - Introducción a los Sistemas Distribuídos               											
+					Trabajo Práctico Final. Grupo 6   
+						- 2do. cuatrimestre de 2011 -
 				Explicación sobre funcionamiento de scripts
 ================================================================================================================
 Equipos
 ================
 Se usan al menos 8 máquinas, las cuales se organizan de la siguiente forma:- 6 corresponden a los routers.- 1 funciona como los 3 servers (ftp, web y telnet).- 1 funciona como los 3 hosts (A, B y C).
-Tanto los servers como los host funcionan de a uno por vez, no en forma simultánea.
+Tanto los servers como los hosts funcionan de a uno por vez, no en forma simultánea.
 
 
 Scripts
@@ -27,8 +28,8 @@ tabla de ruteo de cada dispositivo.
 		1. Deshabilitación de las interfaces
 		2. Borrado de la tabla de ruteo
 		3. Habilitación de la primer interfaz encontrada
-		4. Configuraciñon de los datos de DNS
-		5. Seteo de el nombre del host
+		4. Configuración de los datos de DNS
+		5. Seteo del nombre del host
 		6. Habilitación del forwardeo de paquetes IP
 		7. Configuración las sub interfaces
 		8. Configuración la tabla de ruteo
@@ -40,7 +41,7 @@ tabla de ruteo de cada dispositivo.
 	 		./equipos_conf.sh FTP
 
 1.2 servidores_conf.sh: Script de configuración de servidores.
-Debe ejecutarse después de haber ejecutado equipos_conf.sh y solamente en los equipos que funcionen como servidores Web, FTP o TELNET. En el caso particular de esta simulación el mismo solo deberá correrse en un solo equipo. Debe controlarse que la máquina cuente con los tres servicios (apache2, telnetd y proftpd) en caso de no contar con ellos deberán instalarse los paquetes respectivos. Una vez ejecutado el script se inicia el servicio que recibe en el primer parámetro.
+Debe ejecutarse después de haber ejecutado equipos_conf.sh y solamente en los equipos que funcionen como servidores WEB, FTP o TELNET. En el caso particular de esta simulación el mismo solo deberá correrse en un solo equipo. Debe controlarse que la máquina cuente con los tres servicios (apache2, telnetd y proftpd) en caso de no contar con ellos deberán instalarse los paquetes respectivos. Una vez ejecutado el script se inicia el servicio que recibe en el primer parámetro.
 
  - Los pasos seguidos en el script son:
 	Servidor web
@@ -59,7 +60,11 @@ tabla de ruteo de cada dispositivo.
 		Configuracion del ftp server
 			./servidores_conf.sh FTP
 1.3 dns_conf.sh: Script de configuración de DNS.
-Debe ejecutarse después de haber ejecutado equipos_ conf.sh y solo en los equipos que actúen como servidor de DNS. Este script es el encargado de configurar e iniciar el servicio de DNS en cada host según corresponda. También debe estar instalado en servicio bind en caso contrario deberá instalarse el paquete correspondiente.
+Debe ejecutarse después de haber ejecutado equipos_ conf.sh y solo en los equipos que actúen como servidor de DNS. Este script es el encargado de configurar e iniciar el servicio de DNS en cada host según corresponda. También debe estar instalado el servicio bind en caso contrario deberá instalarse el paquete correspondiente.
+ROOT: H17.
+SLAVE (del root): H5.
+OTROS: H16.
+SANRAFAEL: H3.
 
  - Los pasos seguidos en el script son:
 		1. Detención de bind9
